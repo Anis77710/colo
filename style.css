@@ -902,32 +902,3 @@ rom { width: 0; } to { width: 100%; }
   .page-hero-grid, .detail-grid { grid-template-columns: 1fr; }
   .page-icon { margin: 0; width: 140px; height: 140px; font-size: 3rem; }
 }
-/* Light mode → dark logo */
-.nav-logo img,
-.footer-logo img {
-    filter: brightness(0);
-    transition: filter .3s ease;
-}
-
-/* Dark mode → white logo */
-@media (prefers-color-scheme: dark) {
-    .nav-logo img,
-    .footer-logo img{
-        filter: brightness(0) invert(1);
-    }
-}
-/* About image background */
-.about-img-wrap {
-    background: var(--surface); /* light mode */
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    .about-img-wrap {
-        background: rgb(1, 1, 39); /* soft dark blue */
-    }
-
-    .about-img-wrap img {
-           background: var(--surface);
-    }
-}
