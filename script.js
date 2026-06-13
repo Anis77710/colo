@@ -78,21 +78,29 @@ document.addEventListener('DOMContentLoaded', () => {
       backToTop.classList.remove('visible');
     }
   };
+// Contact form
 
-  // Contact form
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const original = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-    btn.style.background = 'linear-gradient(135deg, #059669, #10b981)';
-    setTimeout(() => {
-      btn.innerHTML = original;
-      btn.style.background = '';
-      form.reset();
-    }, 3000);
-  });
+const form =
+document.getElementById('contactForm');
+
+if(form){
+
+form.addEventListener(
+'submit',
+
+()=>{
+
+const btn =
+form.querySelector(
+'button[type="submit"]'
+);
+
+btn.innerHTML =
+'<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+});
+
+}
 
   // Current year
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -113,5 +121,22 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', activateLink, { passive: true });
 
 });
+// form redirect stop
 
-// inspect na garne 
+const form = document.getElementById("contactForm");
+
+if(form){
+
+form.addEventListener("submit",(e)=>{
+
+const btn =
+form.querySelector("button");
+
+btn.innerHTML =
+"Sending...";
+
+});
+
+}
+
+
