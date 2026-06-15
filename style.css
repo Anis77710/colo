@@ -4085,3 +4085,23 @@ scale(.85);
 }
 
 }
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.team-link{
+display:block;
+text-decoration:none;
+color:inherit;
+}
+
+.team-card{
+cursor:pointer;
+}
